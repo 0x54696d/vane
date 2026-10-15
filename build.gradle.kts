@@ -113,8 +113,8 @@ configure(vanePlugins) {
 	}
 
 	dependencies {
-		compileOnly(project(":vane-annotations"))
-		annotationProcessor(project(path = ":vane-annotations"))
+		compileOnly(project(path = ":vane-annotations", configuration = "runtimeElements"))
+		annotationProcessor(project(path = ":vane-annotations", configuration = "runtimeElements"))
 	}
 }
 
@@ -129,7 +129,7 @@ configure(subprojects.filter {
 		// shadow configuration of the shadowed project.
 		implementation(project(path = ":vane-core", configuration = "shadow"))
 		// But also depend on core itself.
-		implementation(project(path = ":vane-core"))
+		implementation(project(path = ":vane-core", configuration = "runtimeElements"))
 	}
 }
 
