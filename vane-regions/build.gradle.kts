@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-	implementation(project(":vane-portals"))
+	implementation(project(path = ":vane-portals", configuration = "runtimeElements"))
 	compileOnly(libs.vault)
 	compileOnly(libs.json)
 }
