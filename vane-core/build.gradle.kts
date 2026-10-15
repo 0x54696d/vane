@@ -22,7 +22,7 @@ dependencies {
     implementation(libs.commonsLang)
     implementation(libs.commonsText)
     api(libs.json)
-    implementation(project(":vane-annotations"))
+    implementation(project(path = ":vane-annotations", configuration = "runtimeElements"))
 }
 
 val resource_pack_sha1 by lazy {
