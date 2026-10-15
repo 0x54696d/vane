@@ -16,7 +16,6 @@ sourceSets {
 dependencies {
     implementation(libs.nightConfig)
     implementation(libs.slf4j)
-    implementation(project(path = ":vane-core", configuration = "runtimeElements"))
     compileOnly(libs.json)
 }
 
