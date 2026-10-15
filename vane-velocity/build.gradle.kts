@@ -9,7 +9,6 @@ dependencies {
     implementation(libs.bstatsVelocity)
     implementation(libs.bstatsBase)
     implementation(libs.json)
-    implementation(project(path = ":vane-core", configuration = "runtimeElements"))
     implementation(rootProject.project(":vane-proxy-core"))
 }
 
